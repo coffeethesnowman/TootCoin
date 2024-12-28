@@ -121,7 +121,7 @@
             <h2>Join the Fun</h2>
             <p>Ready to toot your way to the top? Follow us on Twitter or join our Discord to become part of the TootCoin family.</p>
             <p>Contact Address: DxproJfPzgPh3Z4YdEmXQNWFbh5atFCyZEuhkjDmpump</p>
-            <a href="https://twitter.com/tootcoin" class="cta-button">Follow Us</a>
+            <a href="https://x.com/TOOTCOINS" class="cta-button">Follow Us</a>
         </section>
     <section id="fun-section" class="section">
             <h2>Fun Interactive Buttons</h2>
