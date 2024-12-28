@@ -227,23 +227,6 @@
         });
     </script>
 <script>
-        const tabs = document.querySelectorAll('nav a[data-tab]');
-        const sections = document.querySelectorAll('main .section');
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', (e) => {
-                e.preventDefault();
-                const target = tab.getAttribute('data-tab');
-
-                sections.forEach(section => section.classList.remove('active'));
-                document.getElementById(target).classList.add('active');
-
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-            });
-        });
-    </script>
-<script>
     const canvas = document.getElementById('toot-game');
     const ctx = canvas.getContext('2d');
 
@@ -357,19 +340,8 @@
         }
     });
 
-    // Touch controls for mobile
-    canvas.addEventListener('touchstart', () => {
-        if (!isGameOver) {
-            tootbus.velocity = tootbus.lift;
-        } else {
-            // Restart game
-            pipes = [];
-            score = 0;
-            tootbus.y = canvas.height / 2;
-            tootbus.velocity = 0;
-            isGameOver = false;
-            createPipe();
-            gameLoop();
+    // Start game directly without mobile touch support
+        gameLoop();
         }
     });
 
