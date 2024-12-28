@@ -57,7 +57,7 @@
             display: block;
         }
         .cta-button {
-            background-color: #00796b;
+            background-color: #ff69b4; /* Fun hot pink */
             color: white;
             padding: 10px 20px;
             font-size: 1.2rem;
@@ -69,7 +69,7 @@
             display: inline-block;
         }
         .cta-button:hover {
-            background-color: #004d40;
+            background-color: #ff1493; /* Bright pink for hover effect */
         }
         footer {
             margin-top: 20px;
@@ -309,4 +309,3 @@
     </script>
 </body>
 </html>
-
