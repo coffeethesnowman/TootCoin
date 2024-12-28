@@ -254,8 +254,7 @@
     // Game variables
     let tootbus = { x: 50, y: 150, width: 30, height: 30, gravity: 2, lift: -25, velocity: 0 };
     let pipes = [];
-    let pipeWidth = 60;
-    let pipeGap = 150;
+    let pipeGap = 200; // Adjusted for vertical layout
     let score = 0;
     let isGameOver = false;
     const tootbusImg = new Image();
@@ -270,6 +269,8 @@
         pipes.forEach(pipe => {
             ctx.fillStyle = '#4CAF50';
             ctx.fillRect(pipe.x, 0, pipeWidth, pipe.topHeight);
+            ctx.fillRect(pipe.x, pipe.topHeight + pipeGap, pipeWidth, canvas.height);
+        });
             ctx.fillRect(pipe.x, pipe.topHeight + pipeGap, pipeWidth, canvas.height);
         });
     }
@@ -348,7 +349,23 @@
             // Restart game
             pipes = [];
             score = 0;
-            tootbus.y = 150;
+            tootbus.y = canvas.height / 2;
+            tootbus.velocity = 0;
+            isGameOver = false;
+            createPipe();
+            gameLoop();
+        }
+    });
+
+    // Touch controls for mobile
+    canvas.addEventListener('touchstart', () => {
+        if (!isGameOver) {
+            tootbus.velocity = tootbus.lift;
+        } else {
+            // Restart game
+            pipes = [];
+            score = 0;
+            tootbus.y = canvas.height / 2;
             tootbus.velocity = 0;
             isGameOver = false;
             createPipe();
