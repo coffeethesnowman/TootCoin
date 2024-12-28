@@ -101,6 +101,7 @@
         <a href="#" data-tab="token-burning">Token Burning</a>
         <a href="#" data-tab="socials">Socials</a>
     </nav>
+        <a href="#" data-tab="toot-shooter">Toot Shooter</a>
     <main>
         <section id="about" class="section active">
             <h2>What is TootCoin?</h2>
@@ -118,6 +119,12 @@
         <section id="socials" class="section">
             <h2>Follow Us</h2>
             <p>Follow us on Twitter: <a href="https://x.com/tootcoins?s=21&t=leobGK6bTy7QJAK1HNhWGQ" target="_blank">@TootCoins</a></p>
+        </section>
+            <section id="toot-shooter" class="section">
+            <h2>Toot Shooter Game</h2>
+            <canvas id="tootCanvas" width="800" height="400" style="background-color: lightblue; border: 2px solid #00796b;"></canvas>
+            <p>Use the arrow keys to move and press SPACE to toot!</p>
+            <p id="toot-score">Score: 0</p>
         </section>
     </main>
     <footer>
@@ -215,6 +222,90 @@
             const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
             tootFact.textContent = randomFact;
         });
+    </script>
+    <script>
+        const shooterTab = document.querySelector('[data-tab="toot-shooter"]');
+        const shooterSection = document.getElementById('toot-shooter');
+
+        let canvas = document.getElementById('tootCanvas');
+        let ctx = canvas.getContext('2d');
+        let player = { x: canvas.width / 2, y: canvas.height - 30, width: 50, height: 20 };
+        let bullets = [];
+        let targets = [];
+        let score = 0;
+        let isGameRunning = true;
+
+        function drawPlayer() {
+            ctx.fillStyle = '#00796b';
+            ctx.fillRect(player.x, player.y, player.width, player.height);
+        }
+
+        function drawBullets() {
+            ctx.fillStyle = '#ff6347';
+            bullets.forEach((bullet) => {
+                ctx.fillRect(bullet.x, bullet.y, 5, 10);
+                bullet.y -= 5;
+            });
+            bullets = bullets.filter((bullet) => bullet.y > 0);
+        }
+
+        function drawTargets() {
+            ctx.fillStyle = '#ffa500';
+            targets.forEach((target) => {
+                ctx.fillRect(target.x, target.y, target.width, target.height);
+                target.y += 2;
+            });
+            targets = targets.filter((target) => target.y < canvas.height);
+        }
+
+        function detectCollisions() {
+            bullets.forEach((bullet, bIndex) => {
+                targets.forEach((target, tIndex) => {
+                    if (
+                        bullet.x < target.x + target.width &&
+                        bullet.x + 5 > target.x &&
+                        bullet.y < target.y + target.height &&
+                        bullet.y + 10 > target.y
+                    ) {
+                        bullets.splice(bIndex, 1);
+                        targets.splice(tIndex, 1);
+                        score += 10;
+                        document.getElementById('toot-score').textContent = `Score: ${score}`;
+                    }
+                });
+            });
+        }
+
+        function spawnTarget() {
+            const target = {
+                x: Math.random() * (canvas.width - 30),
+                y: 0,
+                width: 30,
+                height: 30
+            };
+            targets.push(target);
+        }
+
+        function gameLoop() {
+            if (!isGameRunning) return;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawPlayer();
+            drawBullets();
+            drawTargets();
+            detectCollisions();
+            requestAnimationFrame(gameLoop);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'ArrowLeft' && player.x > 0) player.x -= 10;
+            if (e.code === 'ArrowRight' && player.x < canvas.width - player.width) player.x += 10;
+            if (e.code === 'Space') {
+                bullets.push({ x: player.x + player.width / 2 - 2.5, y: player.y });
+            }
+        });
+
+        setInterval(spawnTarget, 1000);
+        gameLoop();
     </script>
 </body>
 </html>
