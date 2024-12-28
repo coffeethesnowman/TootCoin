@@ -88,7 +88,7 @@
     <header>
         <h1>TootCoin</h1>
         <p class="tagline">The cryptocurrency that’s full of laughs!</p>
-        <img src="tootcoin_logo.png" alt="TootCoin Logo" class="toot-coin-image">
+        <img src="tootcoin.png" alt="TootCoin Logo" class="toot-coin-image">
     </header>
     <nav>
         <a href="#" data-tab="about">About</a>
