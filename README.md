@@ -121,15 +121,15 @@
     </section>
     <main>
         
-        <section id="how-it-works" class="section">
+       <section id="how-it-works" class="section">
         <h2>How It Works</h2>
         <p>With every $500,000 market cap milestone, 10,000 TootCoins are burned, making your coins more valuable. Plus, every trade is a chance to share a laugh and spread joy.</p>
-        <iframe src="https://pump.fun/coin/DxproJfPzgPh3Z4YdEmXQNWFbh5atFCyZEuhkjDmpump" width="100%" height="400" style="border: none; margin-top: 20px;"></iframe>
+        <canvas id="toot-game" width="800" height="400" style="border: 1px solid #ddd; display: block; margin: 20px auto;"></canvas>
         <button id="toot-counter-btn" class="cta-button">Make a Toot!</button>
         <p id="toot-counter">Toots Made: 0</p>
         <img width="779" alt="tooting burning image" src="https://github.com/user-attachments/assets/167cb535-c8d2-4dfa-b9b4-a947e41a2a59" style="margin-top: 20px; border-radius: 10px; max-width: 100%;">
     </section>
-
+    
     </main>
     <footer>
         <p>&copy; 2024 TootCoin Inc. All rights reserved. Powered by laughter and toots.</p>
@@ -226,5 +226,119 @@
             });
         });
     </script>
+<script>
+    const canvas = document.getElementById('toot-game');
+    const ctx = canvas.getContext('2d');
+
+    // Game variables
+    let tootbus = { x: 50, y: 150, width: 50, height: 50, gravity: 2, lift: -25, velocity: 0 };
+    let pipes = [];
+    let pipeWidth = 60;
+    let pipeGap = 150;
+    let score = 0;
+    let isGameOver = false;
+    const tootbusImg = new Image();
+    tootbusImg.src = 'https://github.com/user-attachments/assets/d291d7cf-a8cc-467f-8ef9-b1fae2a1c28d';
+
+    function createPipe() {
+        const topHeight = Math.random() * (canvas.height - pipeGap - 50) + 20;
+        pipes.push({ x: canvas.width, topHeight });
+    }
+
+    function drawPipes() {
+        pipes.forEach(pipe => {
+            ctx.fillStyle = '#4CAF50';
+            ctx.fillRect(pipe.x, 0, pipeWidth, pipe.topHeight);
+            ctx.fillRect(pipe.x, pipe.topHeight + pipeGap, pipeWidth, canvas.height);
+        });
+    }
+
+    function movePipes() {
+        pipes.forEach(pipe => {
+            pipe.x -= 3;
+        });
+
+        if (pipes.length && pipes[0].x + pipeWidth < 0) {
+            pipes.shift();
+            score++;
+        }
+
+        if (!pipes.length || pipes[pipes.length - 1].x < canvas.width - 200) {
+            createPipe();
+        }
+    }
+
+    function drawTootbus() {
+        ctx.drawImage(tootbusImg, tootbus.x, tootbus.y, tootbus.width, tootbus.height);
+    }
+
+    function checkCollision() {
+        if (tootbus.y + tootbus.height > canvas.height || tootbus.y < 0) {
+            isGameOver = true;
+        }
+
+        pipes.forEach(pipe => {
+            if (
+                tootbus.x < pipe.x + pipeWidth &&
+                tootbus.x + tootbus.width > pipe.x &&
+                (tootbus.y < pipe.topHeight || tootbus.y + tootbus.height > pipe.topHeight + pipeGap)
+            ) {
+                isGameOver = true;
+            }
+        });
+    }
+
+    function gameLoop() {
+        if (isGameOver) {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#fff';
+            ctx.font = '30px Arial';
+            ctx.fillText('Game Over!', canvas.width / 2 - 75, canvas.height / 2);
+            ctx.fillText(`Score: ${score}`, canvas.width / 2 - 50, canvas.height / 2 + 40);
+            return;
+        }
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw pipes and tootbus
+        drawPipes();
+        drawTootbus();
+
+        // Update positions
+        movePipes();
+        tootbus.velocity += tootbus.gravity;
+        tootbus.y += tootbus.velocity;
+
+        checkCollision();
+
+        ctx.fillStyle = '#000';
+        ctx.font = '20px Arial';
+        ctx.fillText(`Score: ${score}`, 10, 30);
+
+        requestAnimationFrame(gameLoop);
+    }
+
+    // Event listener for jump
+    window.addEventListener('keydown', (e) => {
+        if (e.code === 'Space' && !isGameOver) {
+            tootbus.velocity = tootbus.lift;
+        } else if (e.code === 'Space' && isGameOver) {
+            // Restart game
+            pipes = [];
+            score = 0;
+            tootbus.y = 150;
+            tootbus.velocity = 0;
+            isGameOver = false;
+            createPipe();
+            gameLoop();
+        }
+    });
+
+    // Start game
+    createPipe();
+    gameLoop();
+</script>
 </body>
 </html>
+
