@@ -119,6 +119,7 @@
         <section id="socials" class="section">
             <h2>Follow Us</h2>
             <p>Follow us on Twitter: <a href="https://x.com/tootcoins?s=21&t=leobGK6bTy7QJAK1HNhWGQ" target="_blank">@TootCoins</a></p>
+            <p>Contact Address: DxproJfPzgPh3Z4YdEmXQNWFbh5atFCyZEuhkjDmpump</p>
         </section>
             <section id="toot-shooter" class="section">
             <h2>Toot Shooter Game</h2>
