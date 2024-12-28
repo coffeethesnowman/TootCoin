@@ -9,8 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e0f7fa; /* Light cyan background for easy readability */
-            color: #333;
+            background: url('https://github.com/user-attachments/assets/a1ea6935-c93d-4fa0-952b-6afda5bf2959') no-repeat center center fixed; background-size: cover;
             text-align: center;
         }
         header {
