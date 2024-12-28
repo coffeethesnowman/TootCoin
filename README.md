@@ -105,13 +105,13 @@
         <a href="#join" onclick="showSection('join')">Join Us</a>
     </nav>
 
-    <section id="how-it-works" class="section">
-        <h2>How It Works</h2>
-        <p>With every $500,000 market cap milestone, 10,000 TootCoins are burned, making your coins more valuable. Plus, every trade is a chance to share a laugh and spread joy.</p>
-        <button id="toot-counter-btn" class="cta-button">Make a Toot!</button>
-        <p id="toot-counter">Toots Made: 0</p>
-        <img width="779" alt="tooting burning image" src="https://github.com/user-attachments/assets/167cb535-c8d2-4dfa-b9b4-a947e41a2a59" style="margin-top: 20px; border-radius: 10px; max-width: 100%;">
-    </section>
+    <section id="about" class="section active">
+            <h2>About TootCoin</h2>
+            <p>TootCoin isn’t just another cryptocurrency; it’s a revolution powered by humor and toots! Trade with fun, laugh with friends, and be part of the gassiest community around.</p>
+            <img width="593" alt="tootcoin" src="https://github.com/user-attachments/assets/2b416e94-3ac8-465b-b0a5-7b13db648a8e" class="fun-graphic" style="width: 200px;">
+            <button id="fun-facts-btn" class="cta-button" style="background: #ff5722; font-size: 1.5rem;">Get a Toot Fact!</button>
+            <p id="fun-fact-display" style="font-size: 1.2rem; font-weight: bold; margin-top: 15px;">Click the button to learn something funny about tooting!</p>
+        </section>
 
     <section id="join" class="section">
         <h2>Join the Fun</h2>
@@ -120,14 +120,7 @@
         <a href="https://x.com/TOOTCOINS" class="cta-button">Follow Us</a>
     </section>
     <main>
-        <section id="about" class="section active">
-            <h2>About TootCoin</h2>
-            <p>TootCoin isn’t just another cryptocurrency; it’s a revolution powered by humor and toots! Trade with fun, laugh with friends, and be part of the gassiest community around.</p>
-            <img width="593" alt="tootcoin" src="https://github.com/user-attachments/assets/2b416e94-3ac8-465b-b0a5-7b13db648a8e" class="fun-graphic" style="width: 200px;">
-            <button id="fun-facts-btn" class="cta-button" style="background: #ff5722; font-size: 1.5rem;">Get a Toot Fact!</button>
-            <p id="fun-fact-display" style="font-size: 1.2rem; font-weight: bold; margin-top: 15px;">Click the button to learn something funny about tooting!</p>
-        </section>
-
+        
         <section id="how-it-works" class="section">
             <h2>How It Works</h2>
             <p>With every $500,000 market cap milestone, 10,000 TootCoins are burned, making your coins more valuable. Plus, every trade is a chance to share a laugh and spread joy.</p>
@@ -136,12 +129,6 @@
             <img width="779" alt="tooting burning image" src="https://github.com/user-attachments/assets/167cb535-c8d2-4dfa-b9b4-a947e41a2a59" style="margin-top: 20px; border-radius: 10px; max-width: 100%;">
         </section>
 
-        <section id="join" class="section">
-            <h2>Join the Fun</h2>
-            <p>Ready to toot your way to the top? Follow us on Twitter or join our Discord to become part of the TootCoin family.</p>
-            <p>Contact Address: DxproJfPzgPh3Z4YdEmXQNWFbh5atFCyZEuhkjDmpump</p>
-            <a href="https://x.com/TOOTCOINS" class="cta-button">Follow Us</a>
-        </section>
     </main>
     <footer>
         <p>&copy; 2024 TootCoin Inc. All rights reserved. Powered by laughter and toots.</p>
