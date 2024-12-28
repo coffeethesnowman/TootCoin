@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,11 +8,13 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://github.com/user-attachments/assets/a1ea6935-c93d-4fa0-952b-6afda5bf2959') no-repeat center center fixed; background-size: cover;
+            background: url('https://github.com/user-attachments/assets/a1ea6935-c93d-4fa0-952b-6afda5bf2959') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
             text-align: center;
         }
         header {
-            background-color: rgba(0, 188, 212, 0.9); /* Soothing teal */
+            background-color: rgba(0, 188, 212, 0.9);
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
@@ -26,10 +27,6 @@
             font-size: 1.5rem;
             margin: 10px 0;
             color: #ffffff;
-        }
-        .toot-coin-image {
-            max-width: 150px;
-            margin: 20px auto;
         }
         nav {
             margin: 20px 0;
@@ -86,6 +83,11 @@
             margin-top: 20px;
             color: #00796b;
         }
+        #toot-fact {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: #004d40;
+        }
     </style>
 </head>
 <body>
@@ -105,6 +107,8 @@
             <p>TootCoin is the world’s funniest cryptocurrency! It’s not just money; it’s a fart-tastic journey of giggles and fun. Perfect for those who love to trade with a sense of humor.</p>
             <button class="cta-button" id="toot-game">Click Here to Make a Toot!</button>
             <p id="toot-counter">Toots Made: 0</p>
+            <button class="cta-button" id="fun-fact-button">Click Here for a Fun Toot Fact!</button>
+            <p id="toot-fact">Press the button to learn something funny about tooting!</p>
         </section>
         <section id="token-burning" class="section">
             <h2>How Does TootCoin Work?</h2>
@@ -148,6 +152,22 @@
 
             tootCount++;
             tootCounter.textContent = `Toots Made: ${tootCount}`;
+        });
+
+        // Display a random fun fact
+        const funFactButton = document.getElementById('fun-fact-button');
+        const tootFact = document.getElementById('toot-fact');
+        const funFacts = [
+            "Did you know? The average person toots 14 times a day!",
+            "Fun Fact: Tooting helps relieve pressure and keeps your intestines healthy!",
+            "Here's a fact: Some foods, like beans, are famous for making you toot!",
+            "Guess what? Toots are mostly made of nitrogen and hydrogen!",
+            "Believe it or not, toots can travel at speeds of 10 feet per second!"
+        ];
+
+        funFactButton.addEventListener('click', () => {
+            const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
+            tootFact.textContent = randomFact;
         });
     </script>
 </body>
