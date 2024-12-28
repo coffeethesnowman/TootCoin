@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TootCoin - The Funniest Cryptocurrency</title>
     <style>
+        <img width="593" alt="tootcoin " src="https://github.com/user-attachments/assets/1ed4fa07-0ae4-4c58-a5e0-ff2e148be840" />
         body {
             font-family: Arial, sans-serif;
             margin: 0;
