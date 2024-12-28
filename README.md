@@ -100,12 +100,12 @@
         <p class="tagline">The cryptocurrency that’s full of laughs and gas!</p>
     </header>
     <nav>
-        <a href="#about">About</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#join">Join Us</a>
+        <a href="#about" data-tab="about">About</a>
+        <a href="#how-it-works" data-tab="how-it-works">How It Works</a>
+        <a href="#join" data-tab="join">Join Us</a>
     </nav>
     <main>
-        <section id="about" class="section">
+        <section id="about" class="section active">
             <h2>About TootCoin</h2>
             <p>TootCoin isn’t just another cryptocurrency; it’s a revolution powered by humor and toots! Trade with fun, laugh with friends, and be part of the gassiest community around.</p>
             <img width="593" alt="tootcoin" src="https://github.com/user-attachments/assets/2b416e94-3ac8-465b-b0a5-7b13db648a8e" class="fun-graphic" style="width: 200px;">
@@ -114,7 +114,6 @@
             <h2>How It Works</h2>
             <p>With every $500,000 market cap milestone, 10,000 TootCoins are burned, making your coins more valuable. Plus, every trade is a chance to share a laugh and spread joy.</p>
             <button class="cta-button">Learn More</button>
-        
             <img width="779" alt="tooting burning image" src="https://github.com/user-attachments/assets/167cb535-c8d2-4dfa-b9b4-a947e41a2a59" style="margin-top: 20px; border-radius: 10px; max-width: 100%;">
         </section>
         <section id="join" class="section">
@@ -122,13 +121,6 @@
             <p>Ready to toot your way to the top? Follow us on Twitter or join our Discord to become part of the TootCoin family.</p>
             <p>Contact Address: DxproJfPzgPh3Z4YdEmXQNWFbh5atFCyZEuhkjDmpump</p>
             <a href="https://x.com/TOOTCOINS" class="cta-button">Follow Us</a>
-        </section>
-    <section id="fun-section" class="section">
-            <h2>Fun Interactive Buttons</h2>
-            <button id="toot-counter-btn" class="cta-button">Make a Toot!</button>
-            <p id="toot-counter">Toots Made: 0</p>
-            <button id="fun-facts-btn" class="cta-button">Get a Fun Toot Fact!</button>
-            <p id="fun-fact-display">Click the button to learn something funny about tooting!</p>
         </section>
     </main>
     <footer>
@@ -201,6 +193,23 @@
         funFactsBtn.addEventListener('click', () => {
             const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
             funFactDisplay.textContent = randomFact;
+        });
+    </script>
+<script>
+        const tabs = document.querySelectorAll('nav a[data-tab]');
+        const sections = document.querySelectorAll('main .section');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = tab.getAttribute('data-tab');
+
+                sections.forEach(section => section.classList.remove('active'));
+                document.getElementById(target).classList.add('active');
+
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
         });
     </script>
 </body>
