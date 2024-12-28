@@ -2,145 +2,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TootCoin - A Gassy Revolution</title>
+    <title>TootCoin - Clean and Fun</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://github.com/user-attachments/assets/1053aa22-1dc7-4d24-8f50-00ce9cb754cc') no-repeat center center fixed; background-size: cover;
+            background: #f7f9fc;
             color: #333;
-            text-align: center;
         }
         header {
-            background: linear-gradient(135deg, #00796b, #004d40);
-            padding: 30px;
-            color: #ffffff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background: #4a90e2;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
         }
         header h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        .tagline {
-            font-size: 1.5rem;
+        header p {
+            font-size: 1.2rem;
             margin-top: 10px;
-            font-style: italic;
         }
         nav {
-            margin: 20px 0;
-            padding: 10px;
-            background: #80cbc4;
             display: flex;
             justify-content: center;
             gap: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            padding: 15px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         nav a {
-            color: white;
+            color: #4a90e2;
             text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            transition: transform 0.2s, color 0.3s;
+            font-weight: 600;
+            transition: color 0.3s;
         }
         nav a:hover {
-            transform: scale(1.1);
-            color: #660066;
+            color: #0366d6;
         }
         main {
-            padding: 20px;
+            padding: 40px 20px;
         }
         .section {
-            background: white;
-            padding: 30px;
             margin: 20px auto;
             max-width: 800px;
-            border-radius: 15px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
         }
-        .cta-button {
-            background: #00897b;
-            color: white;
-            font-size: 1.2rem;
-            padding: 15px 30px;
-            margin-top: 20px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: transform 0.3s, background 0.3s;
-        }
-        .cta-button:hover {
-            transform: translateY(-5px);
-            background: #00695c;
-        }
-        .fun-graphic {
-            animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
         }
         footer {
-            background: #ff69b4;
+            text-align: center;
+            background: #4a90e2;
             color: white;
-            padding: 15px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
     <header>
-        <img width="1048" alt="tootcoin banner" src="https://github.com/user-attachments/assets/d4033203-ebb0-4f65-bbfe-80071d54df86" style="width: 100%; max-height: 300px; object-fit: cover;">
         <h1>TootCoin</h1>
-        <p class="tagline">The cryptocurrency that’s full of laughs and gas!</p>
+        <p>The Cryptocurrency That’s Full of Laughs!</p>
     </header>
     <nav>
-        <a href="#about" onclick="showSection('about')">About</a>
-        <a href="#how-it-works" onclick="showSection('how-it-works')">How It Works</a>
-        <a href="#join" onclick="showSection('join')">Join Us</a>
+        <a href="#about">About</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#join">Join Us</a>
     </nav>
-
-    <section id="about" class="section active">
+    <main>
+        <section id="about" class="section">
             <h2>About TootCoin</h2>
             <p>TootCoin isn’t just another cryptocurrency; it’s a revolution powered by humor and toots! Trade with fun, laugh with friends, and be part of the gassiest community around.</p>
-            <img width="593" alt="tootcoin" src="https://github.com/user-attachments/assets/2b416e94-3ac8-465b-b0a5-7b13db648a8e" class="fun-graphic" style="width: 200px;">
-            <button id="fun-facts-btn" class="cta-button" style="background: #ff5722; font-size: 1.5rem;">Get a Toot Fact!</button>
-            <p id="fun-fact-display" style="font-size: 1.2rem; font-weight: bold; margin-top: 15px;">Click the button to learn something funny about tooting!</p>
         </section>
-
-    <section id="join" class="section">
-        <h2>Join the Fun</h2>
-        <p>Ready to toot your way to the top? Follow us on Twitter or join our Discord to become part of the TootCoin family.</p>
-        <p>Contact Address: DxproJfPzgPh3Z4YdEmXQNWFbh5atFCyZEuhkjDmpump</p>
-        <a href="https://x.com/TOOTCOINS" class="cta-button">Follow Us</a>
-    </section>
-    <main>
-        
-       <section id="how-it-works" class="section">
-        <h2>How It Works</h2>
-        <p>With every $500,000 market cap milestone, 10,000 TootCoins are burned, making your coins more valuable. Plus, every trade is a chance to share a laugh and spread joy.</p>
-        <canvas id="toot-game" width="800" height="400" style="border: 1px solid #ddd; display: block; margin: 20px auto;"></canvas>
-        <button id="toot-counter-btn" class="cta-button">Make a Toot!</button>
-        <p id="toot-counter">Toots Made: 0</p>
-        <img width="779" alt="tooting burning image" src="https://github.com/user-attachments/assets/167cb535-c8d2-4dfa-b9b4-a947e41a2a59" style="margin-top: 20px; border-radius: 10px; max-width: 100%;">
-    </section>
-    
+        <section id="how-it-works" class="section">
+            <h2>How It Works</h2>
+            <p>With every $500,000 market cap milestone, 10,000 TootCoins are burned, making your coins more valuable. Plus, every trade is a chance to share a laugh and spread joy.</p>
+            <button id="toot-counter-btn" class="cta-button" style="background: #4caf50; font-size: 1.2rem; margin-top: 20px;">Make a Toot!</button>
+            <p id="toot-counter" style="font-size: 1.2rem; margin-top: 10px;">Toots Made: 0</p>
+            <button id="fun-facts-btn" class="cta-button" style="background: #ff5722; font-size: 1.2rem; margin-top: 20px;">Get a Fun Toot Fact!</button>
+            <p id="fun-fact-display" style="font-size: 1.2rem; font-weight: bold; margin-top: 10px;">Click the button to learn something funny about tooting!</p>
+        </section>
+        <section id="join" class="section">
+            <h2>Join Us</h2>
+            <p>Be part of the TootCoin revolution today! Follow us on Twitter or join our community on Discord.</p>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2024 TootCoin Inc. All rights reserved. Powered by laughter and toots.</p>
+        <p>&copy; 2024 TootCoin Inc. All rights reserved.</p>
     </footer>
 <script>
-        function showSection(id) {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => section.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-        }
-
         let tootCount = 0;
         const tootCounterBtn = document.getElementById('toot-counter-btn');
         const tootCounterDisplay = document.getElementById('toot-counter');
@@ -207,153 +165,6 @@
         funFactsBtn.addEventListener('click', () => {
             const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
             funFactDisplay.textContent = randomFact;
-        });
-    </script>
-<script>
-        const tabs = document.querySelectorAll('nav a[data-tab]');
-        const sections = document.querySelectorAll('main .section');
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', (e) => {
-                e.preventDefault();
-                const target = tab.getAttribute('data-tab');
-
-                sections.forEach(section => section.classList.remove('active'));
-                document.getElementById(target).classList.add('active');
-
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-            });
-        });
-    </script>
-<script>
-    const canvas = document.getElementById('toot-game');
-    const ctx = canvas.getContext('2d');
-
-    // Set game background
-    const gameBackground = new Image();
-    gameBackground.src = 'https://github.com/user-attachments/assets/ab7e5915-cf94-46bb-a2ca-88f5ae3e22ab';
-
-    // Game variables
-    let tootbus = { x: 50, y: 150, width: 30, height: 30, gravity: 2, lift: -25, velocity: 0 };
-    let pipes = [];
-    let pipeGap = 200; // Adjusted for vertical layout
-    let score = 0;
-    let isGameOver = false;
-    const tootbusImg = new Image();
-    tootbusImg.src = 'https://github.com/user-attachments/assets/d291d7cf-a8cc-467f-8ef9-b1fae2a1c28d';
-
-    function createPipe() {
-        const topHeight = Math.random() * (canvas.height - pipeGap - 50) + 20;
-        pipes.push({ x: canvas.width, topHeight });
-    }
-
-    function drawPipes() {
-        pipes.forEach(pipe => {
-            ctx.fillStyle = '#4CAF50';
-            ctx.fillRect(pipe.x, 0, pipeWidth, pipe.topHeight);
-            ctx.fillRect(pipe.x, pipe.topHeight + pipeGap, pipeWidth, canvas.height);
-        });
-            ctx.fillRect(pipe.x, pipe.topHeight + pipeGap, pipeWidth, canvas.height);
-        });
-    }
-
-    function movePipes() {
-        pipes.forEach(pipe => {
-            pipe.x -= 3;
-        });
-
-        if (pipes.length && pipes[0].x + pipeWidth < 0) {
-            pipes.shift();
-            score++;
-        }
-
-        if (!pipes.length || pipes[pipes.length - 1].x < canvas.width - 200) {
-            createPipe();
-        }
-    }
-
-    function drawTootbus() {
-        ctx.drawImage(tootbusImg, tootbus.x, tootbus.y, tootbus.width, tootbus.height);
-    }
-
-    function checkCollision() {
-        if (tootbus.y + tootbus.height > canvas.height || tootbus.y < 0) {
-            isGameOver = true;
-        }
-
-        pipes.forEach(pipe => {
-            if (
-                tootbus.x < pipe.x + pipeWidth &&
-                tootbus.x + tootbus.width > pipe.x &&
-                (tootbus.y < pipe.topHeight || tootbus.y + tootbus.height > pipe.topHeight + pipeGap)
-            ) {
-                isGameOver = true;
-            }
-        });
-    }
-
-    function gameLoop() {
-        if (isGameOver) {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = '#fff';
-            ctx.font = '30px Arial';
-            ctx.fillText('Game Over!', canvas.width / 2 - 75, canvas.height / 2);
-            ctx.fillText(`Score: ${score}`, canvas.width / 2 - 50, canvas.height / 2 + 40);
-            return;
-        }
-
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        // Draw pipes and tootbus
-        drawPipes();
-        drawTootbus();
-
-        // Update positions
-        movePipes();
-        tootbus.velocity += tootbus.gravity;
-        tootbus.y += tootbus.velocity;
-
-        checkCollision();
-
-        ctx.fillStyle = '#000';
-        ctx.font = '20px Arial';
-        ctx.fillText(`Score: ${score}`, 10, 30);
-
-        requestAnimationFrame(gameLoop);
-    }
-
-    // Event listener for jump
-    window.addEventListener('keydown', (e) => {
-        if (e.code === 'Space' && !isGameOver) {
-            tootbus.velocity = tootbus.lift;
-        } else if (e.code === 'Space' && isGameOver) {
-            // Restart game
-            pipes = [];
-            score = 0;
-            tootbus.y = canvas.height / 2;
-            tootbus.velocity = 0;
-            isGameOver = false;
-            createPipe();
-            gameLoop();
-        }
-    });
-
-    // Start game directly without mobile touch support
-        gameLoop();
-        }
-    });
-
-    // Start game
-    createPipe();
-    gameLoop();
-</script>
-<script>
-        const startScreen = 
-            gameCanvas.style.display = 'block';
-            createPipe();
-            gameLoop();
         });
     </script>
 </body>
