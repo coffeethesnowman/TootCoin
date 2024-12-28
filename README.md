@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('tootcoin.png') no-repeat center center fixed;
+            background: url('tootcoin_wallpaper.png') no-repeat center center fixed;
             background-size: cover;
             color: #333;
             text-align: center;
@@ -63,11 +63,13 @@
             background-color: #ff6347;
             color: white;
             padding: 10px 20px;
-            font-size: 1rem;
+            font-size: 1.2rem;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: 0.3s;
+            margin: 20px auto;
+            display: inline-block;
         }
         .cta-button:hover {
             background-color: #e5533d;
@@ -96,6 +98,7 @@
         <section id="about" class="section active">
             <h2>What is TootCoin?</h2>
             <p>TootCoin is the world’s funniest cryptocurrency! It’s not just money; it’s a fart-tastic journey of giggles and fun. Perfect for those who love to trade with a sense of humor.</p>
+            <button class="cta-button" id="toot-game">Click Here to Make a Toot!</button>
         </section>
         <section id="token-burning" class="section">
             <h2>How Does TootCoin Work?</h2>
@@ -127,12 +130,12 @@
             });
         });
 
-        // Play toot sound
-        document.body.addEventListener('click', () => {
+        // Play toot sound on button click
+        document.getElementById('toot-game').addEventListener('click', (e) => {
+            e.preventDefault();
             const tootSound = document.getElementById('toot-sound');
             tootSound.play();
         });
     </script>
 </body>
 </html>
-
