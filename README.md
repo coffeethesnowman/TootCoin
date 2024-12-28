@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -82,6 +81,11 @@
             color: #ffffff;
             font-size: 0.9rem;
         }
+        #toot-counter {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color: #00796b;
+        }
     </style>
 </head>
 <body>
@@ -100,6 +104,7 @@
             <h2>What is TootCoin?</h2>
             <p>TootCoin is the world’s funniest cryptocurrency! It’s not just money; it’s a fart-tastic journey of giggles and fun. Perfect for those who love to trade with a sense of humor.</p>
             <button class="cta-button" id="toot-game">Click Here to Make a Toot!</button>
+            <p id="toot-counter">Toots Made: 0</p>
         </section>
         <section id="token-burning" class="section">
             <h2>How Does TootCoin Work?</h2>
@@ -131,11 +136,18 @@
             });
         });
 
-        // Play toot sound on button click
-        document.getElementById('toot-game').addEventListener('click', () => {
-            const tootSound = document.getElementById('toot-sound');
+        // Play toot sound and update counter
+        const tootButton = document.getElementById('toot-game');
+        const tootSound = document.getElementById('toot-sound');
+        const tootCounter = document.getElementById('toot-counter');
+        let tootCount = 0;
+
+        tootButton.addEventListener('click', () => {
             tootSound.currentTime = 0; // Restart sound if already playing
             tootSound.play();
+
+            tootCount++;
+            tootCounter.textContent = `Toots Made: ${tootCount}`;
         });
     </script>
 </body>
