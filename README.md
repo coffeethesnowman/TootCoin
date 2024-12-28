@@ -378,12 +378,7 @@
     gameLoop();
 </script>
 <script>
-        const startScreen = document.getElementById('game-start-screen');
-        const gameCanvas = document.getElementById('toot-game');
-        const startGameButton = document.getElementById('start-game-button');
-
-        startGameButton.addEventListener('click', () => {
-            startScreen.style.display = 'none';
+        const startScreen = 
             gameCanvas.style.display = 'block';
             createPipe();
             gameLoop();
