@@ -227,11 +227,32 @@
         });
     </script>
 <script>
+        const tabs = document.querySelectorAll('nav a[data-tab]');
+        const sections = document.querySelectorAll('main .section');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = tab.getAttribute('data-tab');
+
+                sections.forEach(section => section.classList.remove('active'));
+                document.getElementById(target).classList.add('active');
+
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+    </script>
+<script>
     const canvas = document.getElementById('toot-game');
     const ctx = canvas.getContext('2d');
 
+    // Set game background
+    const gameBackground = new Image();
+    gameBackground.src = 'https://github.com/user-attachments/assets/ab7e5915-cf94-46bb-a2ca-88f5ae3e22ab';
+
     // Game variables
-    let tootbus = { x: 50, y: 150, width: 50, height: 50, gravity: 2, lift: -25, velocity: 0 };
+    let tootbus = { x: 50, y: 150, width: 30, height: 30, gravity: 2, lift: -25, velocity: 0 };
     let pipes = [];
     let pipeWidth = 60;
     let pipeGap = 150;
