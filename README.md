@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,9 +13,9 @@
             text-align: center;
         }
         header {
-            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            background: linear-gradient(135deg, #00796b, #004d40);
             padding: 30px;
-            color: white;
+            color: #ffffff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         header h1 {
@@ -32,7 +31,7 @@
         nav {
             margin: 20px 0;
             padding: 10px;
-            background: #ffb6c1;
+            background: #80cbc4;
             display: flex;
             justify-content: center;
             gap: 20px;
@@ -61,7 +60,7 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
         .cta-button {
-            background: #ff69b4;
+            background: #00897b;
             color: white;
             font-size: 1.2rem;
             padding: 15px 30px;
@@ -73,7 +72,7 @@
         }
         .cta-button:hover {
             transform: translateY(-5px);
-            background: #ff1493;
+            background: #00695c;
         }
         .fun-graphic {
             animation: float 3s ease-in-out infinite;
@@ -124,9 +123,85 @@
             <p>Contact Address: DxproJfPzgPh3Z4YdEmXQNWFbh5atFCyZEuhkjDmpump</p>
             <a href="https://twitter.com/tootcoin" class="cta-button">Follow Us</a>
         </section>
+    <section id="fun-section" class="section">
+            <h2>Fun Interactive Buttons</h2>
+            <button id="toot-counter-btn" class="cta-button">Make a Toot!</button>
+            <p id="toot-counter">Toots Made: 0</p>
+            <button id="fun-facts-btn" class="cta-button">Get a Fun Toot Fact!</button>
+            <p id="fun-fact-display">Click the button to learn something funny about tooting!</p>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 TootCoin Inc. All rights reserved. Powered by laughter and toots.</p>
     </footer>
+<script>
+        let tootCount = 0;
+        const tootCounterBtn = document.getElementById('toot-counter-btn');
+        const tootCounterDisplay = document.getElementById('toot-counter');
+        tootCounterBtn.addEventListener('click', () => {
+            tootCount++;
+            tootCounterDisplay.textContent = `Toots Made: ${tootCount}`;
+        });
+
+        const funFacts = [
+            "Did you know? The average person toots 14 times a day!",
+            "Fun Fact: Tooting helps relieve pressure and keeps your intestines healthy!",
+            "Here's a fact: Some foods, like beans, are famous for making you toot!",
+            "Guess what? Toots are mostly made of nitrogen and hydrogen!",
+            "Believe it or not, toots can travel at speeds of 10 feet per second!",
+            "Elephants are known to toot loudly due to their size and diet!",
+            "A toot can be silent but deadly — it's all about air turbulence!",
+            "Did you know? Even astronauts toot in space!",
+            "Tooting is a sign of healthy digestion!",
+            "Toots can be caused by swallowing air while eating or drinking!",
+            "Did you know? Some people can toot on command!",
+            "Birds don't toot because they don't have the same digestive system!",
+            "Fun Fact: Toots can smell differently depending on your diet!",
+            "A single toot can be made up of 5-10 different gases!",
+            "Humans aren’t the only mammals that toot — cows are major contributors to methane toots!",
+            "Toots have been referenced in ancient humor scripts!",
+            "The loudness of a toot depends on the speed and pressure of the gas!",
+            "Toots can travel up to 10 feet in 1 second!",
+            "Fish can toot too, often to communicate with each other!",
+            "Beans contain oligosaccharides, which are notorious for causing toots!",
+            "A healthy gut microbiome produces more frequent but less smelly toots!",
+            "Toots are made mostly of nitrogen (59%) and carbon dioxide (21%)!",
+            "Some reptiles, like snakes, toot to ward off predators!",
+            "Your position while sitting or lying down can affect how loud a toot sounds!",
+            "Some foods, like dairy, can cause louder toots in lactose-intolerant people!",
+            "Toots were once considered a sign of good health in some ancient cultures!",
+            "Guinness World Records has categories for the longest and loudest toots!",
+            "Termites toot methane gas, contributing to global greenhouse effects!",
+            "Tooting can be a byproduct of carbonated drinks!",
+            "Chewing gum can lead to extra toots due to swallowed air!",
+            "Certain medications can alter the frequency or smell of toots!",
+            "Silent toots occur when the muscles around the anus are relaxed!",
+            "Artificial sweeteners like sorbitol can lead to more frequent toots!",
+            "Some cultures believe tooting brings good luck!",
+            "Certain fish use toots as part of their mating calls!",
+            "Toots are typically denser after eating fibrous foods!",
+            "Dogs often toot in their sleep due to their relaxed state!",
+            "Did you know? The sound of a toot comes from vibrations of the anal opening!",
+            "Onions can cause both tears and toots!",
+            "Toots can sometimes be used to diagnose digestive health issues!",
+            "Spicy foods may increase the intensity of toots!",
+            "Whales release massive underwater toots that create bubbles!",
+            "The bacteria in your gut are the main producers of toots!",
+            "Toots are odorless unless sulfur compounds are present!",
+            "Lentils are a popular toot-triggering food!",
+            "Holding in a toot doesn’t make it disappear — it just reabsorbs into your body!",
+            "Yoga poses like \"Wind-Relieving Pose\" help release toots intentionally!",
+            "People toot more while flying due to cabin pressure changes!",
+            "Toots can contain traces of hydrogen sulfide, giving them a distinctive smell!",
+            "You toot while sleeping, though you rarely notice!"
+        ];
+
+        const funFactsBtn = document.getElementById('fun-facts-btn');
+        const funFactDisplay = document.getElementById('fun-fact-display');
+        funFactsBtn.addEventListener('click', () => {
+            const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
+            funFactDisplay.textContent = randomFact;
+        });
+    </script>
 </body>
 </html>
