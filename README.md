@@ -100,9 +100,9 @@
         <p class="tagline">The cryptocurrency that’s full of laughs and gas!</p>
     </header>
     <nav>
-        <a href="#about" data-tab="about" class="active">About</a>
-        <a href="#how-it-works" data-tab="how-it-works">How It Works</a>
-        <a href="#join" data-tab="join">Join Us</a>
+        <a href="#about" onclick="showSection('about')">About</a>
+        <a href="#how-it-works" onclick="showSection('how-it-works')">How It Works</a>
+        <a href="#join" onclick="showSection('join')">Join Us</a>
     </nav>
 
     <section id="how-it-works" class="section">
@@ -130,6 +130,12 @@
         <p>&copy; 2024 TootCoin Inc. All rights reserved. Powered by laughter and toots.</p>
     </footer>
 <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+
         let tootCount = 0;
         const tootCounterBtn = document.getElementById('toot-counter-btn');
         const tootCounterDisplay = document.getElementById('toot-counter');
