@@ -69,6 +69,8 @@
 </head>
 <body>
     <header>
+        <img width="1048" alt="tootcoin banner" src="https://github.com/user-attachments/assets/106879d3-e638-4de1-914c-ce6b273c2d79" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+        <img width="593" alt="tootcoin" src="https://github.com/user-attachments/assets/b89e16be-a907-4296-9c53-f0ccd50b79ba" style="max-width: 200px; margin-top: 20px;">
         <h1>TootCoin</h1>
         <p>The Cryptocurrency That’s Full of Laughs!</p>
     </header>
@@ -78,6 +80,10 @@
         <a href="#join">Join Us</a>
     </nav>
     <main>
+        <section id="disclaimer" class="section">
+            <h2>Disclaimer</h2>
+            <p>TootCoin is a memecoin and is not considered a security. It is designed purely for entertainment and fun purposes.</p>
+        </section>
         <section id="about" class="section">
             <h2>About TootCoin</h2>
             <p>TootCoin isn’t just another cryptocurrency; it’s a revolution powered by humor and toots! Trade with fun, laugh with friends, and be part of the gassiest community around.</p>
@@ -85,6 +91,7 @@
         <section id="how-it-works" class="section">
             <h2>How It Works</h2>
             <p>With every $500,000 market cap milestone, 10,000 TootCoins are burned, making your coins more valuable. Plus, every trade is a chance to share a laugh and spread joy.</p>
+            <img width="779" alt="tooting burning image" src="https://github.com/user-attachments/assets/4186ecf5-7415-428f-80c0-6a92a892c0ee" style="margin-top: 20px; border-radius: 10px; max-width: 100%;">
             <button id="toot-counter-btn" class="cta-button" style="background: #4caf50; font-size: 1.2rem; margin-top: 20px;">Make a Toot!</button>
             <p id="toot-counter" style="font-size: 1.2rem; margin-top: 10px;">Toots Made: 0</p>
             <button id="fun-facts-btn" class="cta-button" style="background: #ff5722; font-size: 1.2rem; margin-top: 20px;">Get a Fun Toot Fact!</button>
@@ -92,7 +99,8 @@
         </section>
         <section id="join" class="section">
             <h2>Join Us</h2>
-            <p>Be part of the TootCoin revolution today! Follow us on Twitter or join our community on Discord.</p>
+            <p>Be part of the TootCoin revolution today! Follow us on Twitter: <a href="https://x.com/TOOTCOINS" target="_blank">@TOOTCOINS</a></p>
+            <p>Contact Address: DxproJfPzgPh3Z4YdEmXQNWFbh5atFCyZEuhkjDmpump</p>
         </section>
     </main>
     <footer>
