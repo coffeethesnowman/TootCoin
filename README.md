@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,23 +9,24 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('tootcoin_wallpaper.png') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #e0f7fa; /* Light cyan background for easy readability */
             color: #333;
             text-align: center;
         }
         header {
-            background-color: rgba(255, 215, 0, 0.9);
+            background-color: rgba(0, 188, 212, 0.9); /* Soothing teal */
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         header h1 {
             font-size: 3rem;
             margin: 0;
+            color: #ffffff;
         }
         .tagline {
             font-size: 1.5rem;
             margin: 10px 0;
+            color: #ffffff;
         }
         .toot-coin-image {
             max-width: 150px;
@@ -33,23 +34,23 @@
         }
         nav {
             margin: 20px 0;
-            background-color: rgba(255, 239, 130, 0.9);
+            background-color: rgba(224, 247, 250, 0.9);
             padding: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #333;
+            color: #00796b;
             font-size: 1.2rem;
             transition: color 0.3s;
         }
         nav a:hover {
-            color: #ff6347;
+            color: #004d40;
         }
         .section {
             display: none;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
             margin: 20px auto;
             width: 80%;
@@ -60,7 +61,7 @@
             display: block;
         }
         .cta-button {
-            background-color: #ff6347;
+            background-color: #00796b;
             color: white;
             padding: 10px 20px;
             font-size: 1.2rem;
@@ -72,13 +73,13 @@
             display: inline-block;
         }
         .cta-button:hover {
-            background-color: #e5533d;
+            background-color: #004d40;
         }
         footer {
             margin-top: 20px;
             padding: 10px;
-            background-color: rgba(255, 215, 0, 0.9);
-            color: #333;
+            background-color: rgba(0, 188, 212, 0.9);
+            color: #ffffff;
             font-size: 0.9rem;
         }
     </style>
@@ -131,9 +132,9 @@
         });
 
         // Play toot sound on button click
-        document.getElementById('toot-game').addEventListener('click', (e) => {
-            e.preventDefault();
+        document.getElementById('toot-game').addEventListener('click', () => {
             const tootSound = document.getElementById('toot-sound');
+            tootSound.currentTime = 0; // Restart sound if already playing
             tootSound.play();
         });
     </script>
