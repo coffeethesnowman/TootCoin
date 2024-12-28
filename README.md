@@ -100,27 +100,30 @@
         <p class="tagline">The cryptocurrency that’s full of laughs and gas!</p>
     </header>
     <nav>
-        <a href="#about" data-tab="about">About</a>
+        <a href="#about" data-tab="about" class="active">About</a>
         <a href="#how-it-works" data-tab="how-it-works">How It Works</a>
         <a href="#join" data-tab="join">Join Us</a>
     </nav>
+
+    <section id="how-it-works" class="section">
+        <h2>How It Works</h2>
+        <p>With every $500,000 market cap milestone, 10,000 TootCoins are burned, making your coins more valuable. Plus, every trade is a chance to share a laugh and spread joy.</p>
+        <button id="toot-counter-btn" class="cta-button">Make a Toot!</button>
+        <p id="toot-counter">Toots Made: 0</p>
+        <img width="779" alt="tooting burning image" src="https://github.com/user-attachments/assets/167cb535-c8d2-4dfa-b9b4-a947e41a2a59" style="margin-top: 20px; border-radius: 10px; max-width: 100%;">
+    </section>
+
+    <section id="join" class="section">
+        <h2>Join the Fun</h2>
+        <p>Ready to toot your way to the top? Follow us on Twitter or join our Discord to become part of the TootCoin family.</p>
+        <p>Contact Address: DxproJfPzgPh3Z4YdEmXQNWFbh5atFCyZEuhkjDmpump</p>
+        <a href="https://x.com/TOOTCOINS" class="cta-button">Follow Us</a>
+    </section>
     <main>
         <section id="about" class="section active">
             <h2>About TootCoin</h2>
             <p>TootCoin isn’t just another cryptocurrency; it’s a revolution powered by humor and toots! Trade with fun, laugh with friends, and be part of the gassiest community around.</p>
             <img width="593" alt="tootcoin" src="https://github.com/user-attachments/assets/2b416e94-3ac8-465b-b0a5-7b13db648a8e" class="fun-graphic" style="width: 200px;">
-        </section>
-        <section id="how-it-works" class="section">
-            <h2>How It Works</h2>
-            <p>With every $500,000 market cap milestone, 10,000 TootCoins are burned, making your coins more valuable. Plus, every trade is a chance to share a laugh and spread joy.</p>
-            <button class="cta-button">Learn More</button>
-            <img width="779" alt="tooting burning image" src="https://github.com/user-attachments/assets/167cb535-c8d2-4dfa-b9b4-a947e41a2a59" style="margin-top: 20px; border-radius: 10px; max-width: 100%;">
-        </section>
-        <section id="join" class="section">
-            <h2>Join the Fun</h2>
-            <p>Ready to toot your way to the top? Follow us on Twitter or join our Discord to become part of the TootCoin family.</p>
-            <p>Contact Address: DxproJfPzgPh3Z4YdEmXQNWFbh5atFCyZEuhkjDmpump</p>
-            <a href="https://x.com/TOOTCOINS" class="cta-button">Follow Us</a>
         </section>
     </main>
     <footer>
