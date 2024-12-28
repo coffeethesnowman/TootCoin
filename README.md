@@ -117,6 +117,5 @@
             tootCount++;
             tootCounter.textContent = `Toots Made: ${tootCount}`;
         });
-    </script>
 </body>
 </html>
