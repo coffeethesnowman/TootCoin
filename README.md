@@ -9,7 +9,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #ffefba, #ffffff);
+            background: url('https://github.com/user-attachments/assets/1053aa22-1dc7-4d24-8f50-00ce9cb754cc') no-repeat center center fixed; background-size: cover;
             color: #333;
             text-align: center;
         }
@@ -96,6 +96,7 @@
 </head>
 <body>
     <header>
+        <img width="1048" alt="tootcoin banner" src="https://github.com/user-attachments/assets/d4033203-ebb0-4f65-bbfe-80071d54df86" style="width: 100%; max-height: 300px; object-fit: cover;">
         <h1>TootCoin</h1>
         <p class="tagline">The cryptocurrency that’s full of laughs and gas!</p>
     </header>
@@ -108,12 +109,14 @@
         <section id="about" class="section">
             <h2>About TootCoin</h2>
             <p>TootCoin isn’t just another cryptocurrency; it’s a revolution powered by humor and toots! Trade with fun, laugh with friends, and be part of the gassiest community around.</p>
-            <img src="https://example.com/tootcoin-logo.png" alt="TootCoin Logo" class="fun-graphic" style="width: 200px;">
+            <img width="593" alt="tootcoin" src="https://github.com/user-attachments/assets/2b416e94-3ac8-465b-b0a5-7b13db648a8e" class="fun-graphic" style="width: 200px;">
         </section>
         <section id="how-it-works" class="section">
             <h2>How It Works</h2>
             <p>With every $500,000 market cap milestone, 10,000 TootCoins are burned, making your coins more valuable. Plus, every trade is a chance to share a laugh and spread joy.</p>
             <button class="cta-button">Learn More</button>
+        
+            <img width="779" alt="tooting burning image" src="https://github.com/user-attachments/assets/167cb535-c8d2-4dfa-b9b4-a947e41a2a59" style="margin-top: 20px; border-radius: 10px; max-width: 100%;">
         </section>
         <section id="join" class="section">
             <h2>Join the Fun</h2>
