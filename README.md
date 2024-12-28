@@ -122,12 +122,13 @@
     <main>
         
         <section id="how-it-works" class="section">
-            <h2>How It Works</h2>
-            <p>With every $500,000 market cap milestone, 10,000 TootCoins are burned, making your coins more valuable. Plus, every trade is a chance to share a laugh and spread joy.</p>
-            <button id="toot-counter-btn" class="cta-button">Make a Toot!</button>
-            <p id="toot-counter">Toots Made: 0</p>
-            <img width="779" alt="tooting burning image" src="https://github.com/user-attachments/assets/167cb535-c8d2-4dfa-b9b4-a947e41a2a59" style="margin-top: 20px; border-radius: 10px; max-width: 100%;">
-        </section>
+        <h2>How It Works</h2>
+        <p>With every $500,000 market cap milestone, 10,000 TootCoins are burned, making your coins more valuable. Plus, every trade is a chance to share a laugh and spread joy.</p>
+        <iframe src="https://pump.fun/coin/DxproJfPzgPh3Z4YdEmXQNWFbh5atFCyZEuhkjDmpump" width="100%" height="400" style="border: none; margin-top: 20px;"></iframe>
+        <button id="toot-counter-btn" class="cta-button">Make a Toot!</button>
+        <p id="toot-counter">Toots Made: 0</p>
+        <img width="779" alt="tooting burning image" src="https://github.com/user-attachments/assets/167cb535-c8d2-4dfa-b9b4-a947e41a2a59" style="margin-top: 20px; border-radius: 10px; max-width: 100%;">
+    </section>
 
     </main>
     <footer>
