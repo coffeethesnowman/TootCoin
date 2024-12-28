@@ -113,6 +113,7 @@
         <section id="token-burning" class="section">
             <h2>How Does TootCoin Work?</h2>
             <p>To keep the fun going and the value rising, every time the market cap reaches $500,000, 10,000 tokens are burned! This helps reduce supply and makes each TootCoin more special.</p>
+            <img width="779" alt="tooting burning image" src="https://github.com/user-attachments/assets/24958245-b53b-484e-8fa8-6534e3c41861" />
         </section>
         <section id="socials" class="section">
             <h2>Follow Us</h2>
