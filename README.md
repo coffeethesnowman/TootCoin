@@ -9,7 +9,7 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f7f9fc;
+            background: url('https://github.com/user-attachments/assets/c172ab28-be84-4329-8a8f-f822b0f94dd4') no-repeat center center fixed; background-size: cover;
             color: #333;
         }
         header {
@@ -65,12 +65,28 @@
             padding: 20px;
             margin-top: 40px;
         }
-    </style>
+    @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    @keyframes shine {
+            0% {
+                background-position: -100%;
+            }
+            100% {
+                background-position: 200%;
+            }
+        }
+        </style>
 </head>
 <body>
     <header>
-        <img width="1048" alt="tootcoin banner" src="https://github.com/user-attachments/assets/106879d3-e638-4de1-914c-ce6b273c2d79" style="width: 100%; height: auto; display: block; margin: 0 auto;">
-        <img width="593" alt="tootcoin" src="https://github.com/user-attachments/assets/b89e16be-a907-4296-9c53-f0ccd50b79ba" style="max-width: 200px; margin-top: 20px;">
+        <img width="1048" alt="tootcoin banner" src="https://github.com/user-attachments/assets/106879d3-e638-4de1-914c-ce6b273c2d79" style="width: 100%; height: auto; display: block; margin: 0 auto; animation: shine 3s infinite;">
+        
         <h1>TootCoin</h1>
         <p>The Cryptocurrency That’s Full of Laughs!</p>
     </header>
@@ -85,6 +101,8 @@
             <p>TootCoin is a memecoin and is not considered a security. It is designed purely for entertainment and fun purposes.</p>
         </section>
         <section id="about" class="section">
+            <img width="593" alt="tootcoin" src="https://github.com/user-attachments/assets/b89e16be-a907-4296-9c53-f0ccd50b79ba" style="max-width: 200px; margin: 0 auto; display: block; animation: float 2s infinite;">
+
             <h2>About TootCoin</h2>
             <p>TootCoin isn’t just another cryptocurrency; it’s a revolution powered by humor and toots! Trade with fun, laugh with friends, and be part of the gassiest community around.</p>
         </section>
